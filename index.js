@@ -1,74 +1,65 @@
+// DATA & CONFIG
+let themeMode = "light";
+let isDarkMode = themeMode === "dark";
+
 const rawData = {
-    content1: {__html: `
-        <div id="mentor" class="description show">
-        <h4>TOPIC: AI/ Machine Learning/ Deep Learning/ Large Language Models/ GenAI</h4>
-        <p>Mục tiêu chung:</p>
-        <ul>
-            <li>Phát triển kỹ năng và tư duy <b style="color: red;">LẬP TRÌNH</b>.</li>
-            <li>Cung cấp kiến thức <b style="color: red;">TOÁN HỌC</b> vào xử lý và phân tích dữ liệu.</li>
-            <li>Làm việc với <b style="color: red;">SIDE PROJECT</b> thực tế trong suốt quá trình hướng dẫn.</li>
-            <li>Hướng dẫn <b style="color: red;">TRAINING/ TESTING/ DEPLOY</b> AI models trên private datasets.</li>
+    content1: `
+        <ul class="list-disc text-left">
+            <li class="text-base">Phát triển kỹ năng và tư duy <b class="text-error">LẬP TRÌNH</b>.</li>
+            <li class="text-base">Cung cấp kiến thức <b class="text-error">TOÁN HỌC</b> vào xử lý và phân tích dữ liệu.</li>
+            <li class="text-base">Làm việc với <b class="text-error">SIDE PROJECT</b> thực tế trong suốt quá trình hướng dẫn.</li>
+            <li class="text-base">Hướng dẫn <b class="text-error">TRAINING/ TESTING/ DEPLOY</b> AI models trên private datasets.</li>
         </ul>
 
-        <p>Mục tiêu <b style="color: red;">cá nhân hóa:</b></p>
-        <p style="font-style: italic;">Kiến thức sẽ được điều chỉnh đề phù hợp với background và định hướng của từng cá nhân.</p>
-        <ul>
-            <li>
-            <b style="color: red;">ĐIỀU CHỈNH</b> kiến thức phù hợp với nền tảng và định hướng của mentee.
+        <p class="italic text-lg">Mục tiêu cá nhân hóa:</b></p>
+        <p class="italic text-lg">(Kiến thức sẽ được điều chỉnh đề phù hợp với background và định hướng của từng cá nhân)</p>
+        <ul class="list-disc text-left">
+            <li class="text-base">
+            <b class="text-error">ĐIỀU CHỈNH</b> kiến thức phù hợp với nền tảng và định hướng của mentee.
             </li>
-            <li>
-            Xây dựng nền móng <b style="color: red;">NGHIÊN CỨU</b> AI papers và kỹ năng <b style="color: red;">PHÂN TÍCH</b> giải quyết vấn đề bằng AI.
+            <li class="text-base">
+            Xây dựng nền móng <b class="text-error">NGHIÊN CỨU</b> AI papers và kỹ năng <b class="text-error">PHÂN TÍCH</b> giải quyết vấn đề bằng AI.
             </li>
-            <li>
-            Hiểu rõ <b style="color: red;">THUẬT TOÁN (CORE)</b> của AI models để phát triển trong các công ty product (Singapore/US/Germany).
+            <li class="text-base">
+            Hiểu rõ <b class="text-error">THUẬT TOÁN (CORE)</b> của AI models để phát triển trong các công ty product (Singapore/US/Germany).
             </li>
-            <li>
-            Cập nhật framework theo <b style="color: red;">XU HƯỚNG</b> của thị trường.
+            <li class="text-base">
+            Cập nhật framework theo <b class="text-error">XU HƯỚNG</b> của thị trường.
             </li>
         </ul>
-        </div>
     `,
-    },
-    content2: [
-        "Kiến <bold>thức</bold> nền tảng về lập trình",
-        "Ngôn ngữ lập trình cho AI",
-        "Thiết kế thuật toán AI và Machine Learning",
-        "Kỹ năng xử lý dữ liệu",
-        "Phát triển mô hình học máy",
-        "Lập trình và áp dụng học sâu (Deep Learning)",
-        "Xử lý lỗi và tối ưu hóa hiệu suất",
-    ],
-    content3: [
-        "Giới thiệu về các công nghệ mới và xu hướng trong phát triển phần mềm",
-        "Triển khai AI và Machine Learning vào dự án thực tế",
-        "Sử dụng công nghệ AR/VR trong dự án thực tế",
-        "Phát triển ứng dụng với công nghệ AI đạo đức",
-        "Ứng dụng công nghệ thực tế ảo hỗn hợp",
-    ]
+    content2:
+        `
+         <ul class="list-disc text-left">
+            <li class="text-base"><b class="text-error">Kiến thức</b> nền tảng về lập trình</li>
+            <li class="text-base">Ngôn ngữ lập trình cho AI</li>
+            <li class="text-base">Thiết kế thuật toán AI và Machine Learning</li>
+            <li class="text-base">Kỹ năng xử lý dữ liệu</li>
+            <li class="text-base">Phát triển mô hình học máy</li>
+            <li class="text-base">Lập trình và áp dụng học sâu (Deep Learning)</li>
+            <li class="text-base">Xử lý lỗi và tối ưu hóa hiệu suất</li>
+        </ul>
+
+    `,
+    content3: `
+        <ul class="list-disc text-left">
+            <li class="text-base">Giới thiệu về các công nghệ mới và xu hướng trong phát triển phần mềm</li>
+            <li class="text-base">Triển khai AI và Machine Learning vào dự án thực tế</li>
+            <li class="text-base">Sử dụng công nghệ AR/VR trong dự án thực tế</li>
+            <li class="text-base">Phát triển ứng dụng với công nghệ AI đạo đức</li>
+            <li class="text-base">Ứng dụng công nghệ thực tế ảo hỗn hợp</li>
+        </ul>
+    `
 
 }
 
 const [popupContent1, popupContent2, popupContent3] = Object.keys(rawData).map((k) => {
-    if (typeof rawData[k] === "object" && rawData[k].__html) {
-      return `<div class="px-8">${rawData[k].__html}</div>`;
-    } else {
-      return (
-        `<div class="px-8">
-          <ul class="text-left list-disc">
-            ${rawData[k].map((it) => `<li class="text-base">${it}</li>`).join("")}
-          </ul>
-        </div>`
-      );
-    }
-  });
-
-// const [popupContent1, popupContent2, popupContent3] = Object.keys(rawData).map((k) => `
-//     <div class="px-8">
-//           <ul class="text-left list-disc">
-//             ${rawData[k].map((it) => `<li class="text-base">${it}</li>`).join('')}
-//         </ul>
-//     </div>
-// `);
+    return `
+        <div class="px-8">
+            ${rawData[k]}
+        </div>
+    `
+});
 
 
 const purposeIDs = {
@@ -80,44 +71,64 @@ const purposeIDs = {
     purpose3: { id: "purpose3", content: popupContent3 },
 }
 
-const popupConfig = {
+let popupConfig = {
     backgroundColor: "var(--primary-foreground)",
     textColor: "var(--text)",
     titleColor: "var(--text)",
     closeColor: "var(--gray)",
 };
+console.log('popupConfig :', popupConfig);
 
 
-const popupTitle = `<p style = "font-size: 24px;"> Danh mục đào tạo</>
-  <hr class="w-full h-[1px] mt-4 bg-divider opacity-35 border-none" />`;
+const popupTitle = `<p class="text-xl"> Danh mục đào tạo</>
+  <hr class="h-[1.5px] w-full my-4 mx-auto bg-divider opacity-35 border-none" />`;
 
+
+// QUERY ELEMENTS
 const purpose1 = document.getElementById(purposeIDs.purpose1.id);
 const purpose2 = document.getElementById(purposeIDs.purpose2.id);
 const purpose3 = document.getElementById(purposeIDs.purpose3.id);
 const methodElm = document.getElementById("method");
+const toggleModeElm = document.getElementById("change-mode");
+const headerBgElm = document.getElementById("header-bg");
+const targetBgElm = document.getElementById("target-bg");
+const themeIconElm = document.getElementById("theme-icon");
 
-console.log(window);
-
-const [purpose1Popup, purpose2Popup, purpose3Popup] = Object.keys(purposeIDs).map(k => {
-    return new Popup({
-        id: purposeIDs[k].id,
-        title: popupTitle,
-        content: purposeIDs[k].content,
-        ...popupConfig
-    });
-})
 
 // EVENT TRIGGER
 purpose1 && purpose1.addEventListener('click', () => {
+    const purpose1Popup = new Popup({
+        id: purposeIDs.purpose1.id,
+        title: popupTitle,
+        content: purposeIDs.purpose1.content,
+        ...popupConfig
+    });
+
     purpose1Popup.show();
 });
+
 purpose2 && purpose2.addEventListener('click', () => {
+    const purpose2Popup = new Popup({
+        id: purposeIDs.purpose2.id,
+        title: popupTitle,
+        content: purposeIDs.purpose2.content,
+        ...popupConfig
+    });
+
     purpose2Popup.show();
 });
 
 purpose3 && purpose3.addEventListener('click', () => {
+    const purpose3Popup = new Popup({
+        id: purposeIDs.purpose3.id,
+        title: popupTitle,
+        content: purposeIDs.purpose3.content,
+        ...popupConfig
+    });
+
     purpose3Popup.show();
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
@@ -139,4 +150,44 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.fade-in-content').forEach(element => {
         observer.observe(element);
     });
+});
+
+const changeDarkMode = () => {
+    themeMode = "dark";
+    document.documentElement.classList.add("dark");
+    headerBgElm && headerBgElm.setAttribute("src", "./images/dark_header_bg.jpg");
+    targetBgElm && targetBgElm.setAttribute("src", "./images/dark_target_bg.jpg")
+    themeIconElm && themeIconElm.setAttribute("src", "./images/sun-icon.svg");
+
+    popupConfig = {
+        backgroundColor: "var(--primary-foreground)",
+        textColor: "var(--text)",
+        titleColor: "var(--text)",
+        closeColor: "var(--gray)",
+    };
+}
+
+const changeLightMode = () => {
+    themeMode = "light";
+    document.documentElement.classList.remove("dark");
+    headerBgElm && headerBgElm.setAttribute("src", "./images/light_header_bg.jpg");
+    targetBgElm && targetBgElm.setAttribute("src", "./images/light_target_bg.jpg");
+    themeIconElm && themeIconElm.setAttribute("src", "./images/moon-icon.svg");
+
+
+    popupConfig = {
+        backgroundColor: "var(--text)",
+        textColor: "var(--primary)",
+        titleColor: "var(--primary)",
+        closeColor: "var(--primary-foreground)",
+    };
+
+}
+
+toggleModeElm && toggleModeElm.addEventListener('click', () => {
+    if (themeMode === "dark") {
+        changeLightMode()
+    } else {
+        changeDarkMode()
+    }
 });
