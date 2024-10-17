@@ -71,13 +71,19 @@ const purposeIDs = {
     purpose3: { id: "purpose3", content: popupContent3 },
 }
 
+const baseConfig = {
+    // fixedHeight: true,
+    // heightMultiplier: 0.8,
+    // height: "600px"
+}
+
 let popupConfig = {
-    backgroundColor: "var(--primary-foreground)",
-    textColor: "var(--text)",
-    titleColor: "var(--text)",
-    closeColor: "var(--gray)",
+    backgroundColor: "var(--text)",
+    textColor: "var(--primary)",
+    titleColor: "var(--primary)",
+    closeColor: "var(--primary-foreground)",
+    ...baseConfig
 };
-console.log('popupConfig :', popupConfig);
 
 
 const popupTitle = `<p class="text-xl"> Danh mục đào tạo</>
@@ -93,18 +99,34 @@ const toggleModeElm = document.getElementById("change-mode");
 const headerBgElm = document.getElementById("header-bg");
 const targetBgElm = document.getElementById("target-bg");
 const themeIconElm = document.getElementById("theme-icon");
+const popupBodyElms = document.getElementsByClassName("popup-body");
+const popupContentElms = document.getElementsByClassName("popup-content");
 
 
 // EVENT TRIGGER
+const configPopupStyle = () => {
+    const bodyElmArr = popupBodyElms ? Array.from(popupBodyElms) : [];
+    const contentElmArr = popupContentElms ? Array.from(popupContentElms) : [];
+
+    if (bodyElmArr.length) {
+        bodyElmArr.forEach((elm) => elm.classList.add("overflow-x-auto"))
+    }
+
+    if (contentElmArr.length) {
+        contentElmArr.forEach((elm) => elm.classList.add("max-h-[350px]", "lg:max-h-[600px]"))
+    }
+}
+
 purpose1 && purpose1.addEventListener('click', () => {
     const purpose1Popup = new Popup({
         id: purposeIDs.purpose1.id,
         title: popupTitle,
         content: purposeIDs.purpose1.content,
-        ...popupConfig
+        ...popupConfig,
     });
 
     purpose1Popup.show();
+    configPopupStyle();
 });
 
 purpose2 && purpose2.addEventListener('click', () => {
@@ -112,10 +134,11 @@ purpose2 && purpose2.addEventListener('click', () => {
         id: purposeIDs.purpose2.id,
         title: popupTitle,
         content: purposeIDs.purpose2.content,
-        ...popupConfig
+        ...popupConfig,
     });
 
     purpose2Popup.show();
+    configPopupStyle();
 });
 
 purpose3 && purpose3.addEventListener('click', () => {
@@ -123,10 +146,11 @@ purpose3 && purpose3.addEventListener('click', () => {
         id: purposeIDs.purpose3.id,
         title: popupTitle,
         content: purposeIDs.purpose3.content,
-        ...popupConfig
+        ...popupConfig,
     });
 
     purpose3Popup.show();
+    configPopupStyle();
 });
 
 
@@ -185,9 +209,5 @@ const changeLightMode = () => {
 }
 
 toggleModeElm && toggleModeElm.addEventListener('click', () => {
-    if (themeMode === "dark") {
-        changeLightMode()
-    } else {
-        changeDarkMode()
-    }
+    themeMode === "dark" ? changeLightMode() : changeDarkMode();
 });
