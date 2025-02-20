@@ -1,54 +1,99 @@
 // DATA & CONFIG
 let themeMode = "light";
 let isDarkMode = themeMode === "dark";
-
+//     Lợi ích khi bạn tham gia khóa Entry-level: Hiểu để sử dụng toán trong tất cả ngành nghề (tài chính, marketing, blockchain, quỹ đầu tư cho đến AI). bạn còn biết về dữ liệu để khai thác thông tin dữ liệu một cách hợp lý. (dữ liệu là mỏ vàng)
+/* <li class="text-base">
+<ul class="list-inside list-disc"><b>Part 2: Dữ liệu và xử lý dữ liệu</b>
+    <li>Distribution</li>
+    <li>Phân Tích</li>
+    <li>Sử dụng python để  phân tích dữ liệu</li>
+</ul>
+// </li> */
 const rawData = {
-    content1: `
-        <ul class="list-disc text-left">
-            <li class="text-base">Phát triển kỹ năng và tư duy <b class="text-error">LẬP TRÌNH</b>.</li>
-            <li class="text-base">Cung cấp kiến thức <b class="text-error">TOÁN HỌC</b> vào xử lý và phân tích dữ liệu.</li>
-            <li class="text-base">Làm việc với <b class="text-error">SIDE PROJECT</b> thực tế trong suốt quá trình hướng dẫn.</li>
-            <li class="text-base">Hướng dẫn <b class="text-error">TRAINING/ TESTING/ DEPLOY</b> AI models trên private datasets.</li>
-        </ul>
+    content1: ` 
+    <p class="text-red-500 text-left ext-xl font-bold text-gray-900 dark:text-white">BẠN SẼ ĐƯỢC:</p>
+    <ul class="list-disc text-left">
+        <li class="text-base">Thay vì chỉ lý thuyết, dùng toán để ứng dụng trong mọi ngành nghề, từ <strong>e-commerce, fintech, marketing, blockchain, đầu tư chứng khoán</strong> cho đến <strong>AI</strong>.</li>
+        <li class="text-base">Biết thế nào khai thác dữ liệu một cách hiệu quả vì dữ liệu là "mỏ vàng".</li>
+        <li class="text-base"><div class="font-semibold text-red-500 inline">Giảm 10%</div> khi đăng kí khóa tiếp theo.</li>
+        <li class="text-base"><div class="font-semibold text-red-500 inline">Nhận 8% affiliates</div> với mỗi lượt giới thiệu thành công.</li>
+    </ul>
 
-        <p class="italic text-lg">Mục tiêu cá nhân hóa:</b></p>
-        <p class="italic text-lg">(Kiến thức sẽ được điều chỉnh đề phù hợp với background và định hướng của từng cá nhân)</p>
-        <ul class="list-disc text-left">
-            <li class="text-base">
-            <b class="text-error">ĐIỀU CHỈNH</b> kiến thức phù hợp với nền tảng và định hướng của mentee.
-            </li>
-            <li class="text-base">
-            Xây dựng nền móng <b class="text-error">NGHIÊN CỨU</b> AI papers và kỹ năng <b class="text-error">PHÂN TÍCH</b> giải quyết vấn đề bằng AI.
-            </li>
-            <li class="text-base">
-            Hiểu rõ <b class="text-error">THUẬT TOÁN (CORE)</b> của AI models để phát triển trong các công ty product (Singapore/US/Germany).
-            </li>
-            <li class="text-base">
-            Cập nhật framework theo <b class="text-error">XU HƯỚNG</b> của thị trường.
-            </li>
-        </ul>
+    <ul class="list-disc text-left">
+        <li class="text-base"><b>Kiến thức bao gồm: </b>
+            <ul class="list-inside list-disc">
+                <li>Đại số tuyến tính/Ma trận</li>
+                <li>Giải tích</li>
+                <li>Xác suất và thống kê</li>
+                <li>Distribution</li>
+                <li>Phân Tích</li>
+                <li>Lập trình</li>
+                <li>Sử dụng python để phân tích dữ liệu</li>
+                <li>Xử lý Big Data trong các bài toán doanh nghiệp</li>
+            </ul>
+        </li>
+    </ul>
     `,
     content2:
         `
-         <ul class="list-disc text-left">
-            <li class="text-base"><b class="text-error">Kiến thức</b> nền tảng về lập trình</li>
-            <li class="text-base">Ngôn ngữ lập trình cho AI</li>
-            <li class="text-base">Thiết kế thuật toán AI và Machine Learning</li>
-            <li class="text-base">Kỹ năng xử lý dữ liệu</li>
-            <li class="text-base">Phát triển mô hình học máy</li>
-            <li class="text-base">Lập trình và áp dụng học sâu (Deep Learning)</li>
-            <li class="text-base">Xử lý lỗi và tối ưu hóa hiệu suất</li>
+    <p class="text-red-500 text-left ext-xl font-bold text-gray-900 dark:text-white">BẠN SẼ ĐƯỢC:</p>
+    <ul class="list-disc text-left">
+        <li class="text-base">Xây dựng profile bằng dự án thực tế</li>
+        <li class="text-base">Biết cách dạy và tối ưu tất cả các loại AI, không chỉ sử dụng câu lệnh prompt.</li>
+        <li class="text-base"><div class="font-semibold text-red-500 inline">Giảm 10%</div> khi đăng kí khóa tiếp theo.</li>
+        <li class="text-base"><div class="font-semibold text-red-500 inline">Nhận 8% affiliates</div> với mỗi lượt giới thiệu thành công.</li>
         </ul>
+
+    <ul class="list-disc text-left">
+        <li class="text-base"><b>Part 1: Advanced Machine Learning & Feature engineering</b>
+            <ul class="list-inside list-disc">
+            <li>Thu thập và khai thác dữ liệu bằng python</li>
+            <li>Huẩn luyện cho machine learning models</li>
+            <li>Sử dụng AI trong tài chính (đầu tư)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="list-disc text-left">
+        <li class="text-base"><b>Part 2: Deep Learning & Computer Vision</b>
+            <ul class="list-inside list-disc">
+            <li>Transformer</li>
+            <li>Training AI models</li>
+            <li>Finetune models với mục đích cụ thể của doanh nghiệp</li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="list-disc text-left">
+        <li class="text-base"><b>Part 3: LLM & GenAI</b>
+            <ul class="list-inside list-disc">
+                <li>Xử lý ngôn ngữ tự nhiên (LLM)</li>
+                <li>Thuật toán của GenAI trong Midjourney và ChatGPT.</li>
+                <li>Học cách tinh chỉnh LLMs và ứng dụng cho cá nhân và doanh nghiệp.</li>
+            </ul>
+        </li>
+    </ul>
 
     `,
     content3: `
-        <ul class="list-disc text-left">
-            <li class="text-base">Giới thiệu về các công nghệ mới và xu hướng trong phát triển phần mềm</li>
-            <li class="text-base">Triển khai AI và Machine Learning vào dự án thực tế</li>
-            <li class="text-base">Sử dụng công nghệ AR/VR trong dự án thực tế</li>
-            <li class="text-base">Phát triển ứng dụng với công nghệ AI đạo đức</li>
-            <li class="text-base">Ứng dụng công nghệ thực tế ảo hỗn hợp</li>
-        </ul>
+    <p class="text-red-500 text-left ext-xl font-bold text-gray-900 dark:text-white">BẠN SẼ ĐƯỢC:</p>
+    <ul class="list-disc text-left">
+        <li class="text-base">Được học đọc và cách nghiên cứu bài báo khoa học top hàng đầu thế giới </li>
+        <li class="text-base">Được rèn luyện kỹ năng như một AI Researcher.</li>
+        <li class="text-base">Luyện tư duy startup như DeepSeek.</li>
+        <li class="text-base"><div class="font-semibold text-red-500 inline">Nhận 8% affiliates</div> với mỗi lượt giới thiệu thành công.</li>
+    </ul>
+
+
+    <ul class="list-disc text-left">
+        <li class="text-base"><b>Become a Researcher: </b>
+            <ul class="list-inside list-disc">
+                <li>Chi tiết liên hệ qua mail: <a href="mailto:bradduy95@gmail.com" class="text-blue-500 underline">📮: bradduy95@gmail.com</a>
+            </li>
+            </ul>
+        </li>
+    </ul>
+    
     `
 
 }
@@ -86,9 +131,14 @@ let popupConfig = {
 };
 
 
-const popupTitle = `<p class="text-xl"> Danh mục đào tạo</>
+const popupTitle_entry = `<p class="text-xl">Dành cho Entry-level</>
   <hr class="h-[1.5px] w-full my-4 mx-auto bg-divider opacity-35 border-none" />`;
 
+const popupTitle_engineer = `<p class="text-xl">Khóa trở thành AI Engineer</>
+  <hr class="h-[1.5px] w-full my-4 mx-auto bg-divider opacity-35 border-none" />`;
+
+const popupTitle_researcher = `<p class="text-xl">Khóa trở thành AI Researcher</>
+  <hr class="h-[1.5px] w-full my-4 mx-auto bg-divider opacity-35 border-none" />`;
 
 // QUERY ELEMENTS
 const purpose1 = document.getElementById(purposeIDs.purpose1.id);
@@ -120,7 +170,7 @@ const configPopupStyle = () => {
 purpose1 && purpose1.addEventListener('click', () => {
     const purpose1Popup = new Popup({
         id: purposeIDs.purpose1.id,
-        title: popupTitle,
+        title: popupTitle_entry,
         content: purposeIDs.purpose1.content,
         ...popupConfig,
     });
@@ -132,7 +182,7 @@ purpose1 && purpose1.addEventListener('click', () => {
 purpose2 && purpose2.addEventListener('click', () => {
     const purpose2Popup = new Popup({
         id: purposeIDs.purpose2.id,
-        title: popupTitle,
+        title: popupTitle_engineer,
         content: purposeIDs.purpose2.content,
         ...popupConfig,
     });
@@ -144,7 +194,7 @@ purpose2 && purpose2.addEventListener('click', () => {
 purpose3 && purpose3.addEventListener('click', () => {
     const purpose3Popup = new Popup({
         id: purposeIDs.purpose3.id,
-        title: popupTitle,
+        title: popupTitle_researcher,
         content: purposeIDs.purpose3.content,
         ...popupConfig,
     });
@@ -210,4 +260,12 @@ const changeLightMode = () => {
 
 toggleModeElm && toggleModeElm.addEventListener('click', () => {
     themeMode === "dark" ? changeLightMode() : changeDarkMode();
+});
+
+const carousel = document.getElementById('carousel');
+document.getElementById('prev').addEventListener('click', () => {
+    carousel.scrollBy({ left: -200, behavior: 'smooth' });
+});
+document.getElementById('next').addEventListener('click', () => {
+    carousel.scrollBy({ left: 200, behavior: 'smooth' });
 });
