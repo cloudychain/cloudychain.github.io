@@ -262,10 +262,4 @@ toggleModeElm && toggleModeElm.addEventListener('click', () => {
     themeMode === "dark" ? changeLightMode() : changeDarkMode();
 });
 
-const carousel = document.getElementById('carousel');
-document.getElementById('prev').addEventListener('click', () => {
-    carousel.scrollBy({ left: -200, behavior: 'smooth' });
-});
-document.getElementById('next').addEventListener('click', () => {
-    carousel.scrollBy({ left: 200, behavior: 'smooth' });
-});
+
